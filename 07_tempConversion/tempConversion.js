@@ -1,9 +1,9 @@
 const ftoc = function (fIn) {
-  let cOut = (32 - fIn) * 5 / 9
+  let cOut = (fIn - 32) * 5 / 9
   if (Number.isInteger(cOut)) {
     return cOut
   } else {
-    let cRound = cOut.toFixed(1)
+    let cRound = Math.round(cOut * 10) / 10
     return cRound
   }
 };
@@ -13,7 +13,7 @@ const ctof = function (cIn) {
   if (Number.isInteger(fOut)) {
     return fOut
   } else {
-    let fRound = cOut.toFixed(1)
+    let fRound = Math.round(fOut * 10) / 10
     return fRound
   }
 };
